@@ -72,7 +72,7 @@ public/           # Public assets
 
 ## Inspiration
 
-This project is inspired by the official [Vite React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) and modern portfolio designs found on [Dribbble](https://dribbble.com/) and [Behance](https://www.behance.net/).
+This project is inspired by Zenify - Portfolio Website Template by Rizal Yustriadi. Check it out at Framer Marketplace https://www.framer.com/marketplace/templates/zenify-portfolio-template/.
 
 ## License
 
