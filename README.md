@@ -2,6 +2,8 @@
 
 This project is a minimal portfolio website template built with **React** and **Vite**. It features hot module replacement (HMR), ESLint integration, and a modular component structure.
 
+![img](https://github.com/user-attachments/assets/695e88e4-d259-4d96-936e-10a325791ce3)
+
 ## Features
 
 - ⚡️ Fast development with [Vite](https://vitejs.dev/)
