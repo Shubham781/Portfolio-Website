@@ -1,0 +1,8 @@
+.grid {
+    color: rgb(199, 199, 199);
+    transition: color 0.2s ease-in-out;
+}
+
+.grid:hover {
+    color: white;
+}

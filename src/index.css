@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #101828; /* Tailwind's bg-gray-900 equivalent */
+}

@@ -1,0 +1,9 @@
+.divider {
+  border-bottom: 2px solid rgb(77, 77, 77);
+  padding-bottom: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.divider:hover {
+  border-color: white;
+}
