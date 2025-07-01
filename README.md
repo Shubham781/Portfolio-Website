@@ -1,12 +1,79 @@
-# React + Vite
+# React + Vite Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a minimal portfolio website template built with **React** and **Vite**. It features hot module replacement (HMR), ESLint integration, and a modular component structure.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Fast development with [Vite](https://vitejs.dev/)
+- ⚛️ React with HMR for instant feedback
+- 🧹 ESLint for code quality
+- 🎨 Modular CSS and Tailwind UI components
+- 📦 Easy dependency management
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+npm install
+```
+
+### Development
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Build
+
+To build for production:
+
+```sh
+npm run build
+```
+
+### Preview
+
+To preview the production build:
+
+```sh
+npm run preview
+```
+
+## ESLint
+
+This template includes a basic ESLint configuration. For production applications, consider using TypeScript and enabling type-aware lint rules. See the [TypeScript template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for more information.
+
+## Plugins
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) (Babel-based Fast Refresh)
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) (SWC-based Fast Refresh)
+
+## Project Structure
+
+```
+src/
+  assets/         # Static assets
+  components/     # React components
+  css/            # CSS modules
+  App.jsx         # Main app component
+  main.jsx        # Entry point
+public/           # Public assets
+```
+
+## Inspiration
+
+This project is inspired by the official [Vite React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) and modern portfolio designs found on [Dribbble](https://dribbble.com/) and [Behance](https://www.behance.net/).
+
+## License
+
+This project is licensed under the MIT License.
