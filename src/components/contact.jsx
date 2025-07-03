@@ -1,5 +1,5 @@
 import React from 'react';
-import Divider from '../components/Divider'; // Corrected the path to the Divider component
+import Divider from '../components/divider'; // Corrected the path to the Divider component
 
 const Contact = () => {
     return (

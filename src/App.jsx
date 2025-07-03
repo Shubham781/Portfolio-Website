@@ -1,23 +1,21 @@
-import React from 'react'
-import Navbar from './components/navbar.jsx'
-import Header from './components/header.jsx'
-import './index.css'
-import Projects from './components/projects.jsx'
-import Footer from './components/footer.jsx'
-import Services from './components/sevices.jsx'
-import Contact from './components/contact.jsx'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'; // Import the Home page
+import About from './pages/About';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <Header/>
-    <Projects/>
-    <Services/>
-    <Contact/>
-    <Footer/>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Render Home page for root route */}
+        <Route path="/about" element={<About />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

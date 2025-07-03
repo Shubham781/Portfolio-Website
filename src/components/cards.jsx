@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 
 function Cards({ layout, cards }) {
   const rowStyles = {
-    row1: 'mx-auto max-w-7xl px-6 lg:px-8', // Consistent spacing for the first row
-    row2: 'justify-center', // Restore the original styling for the second row
-    row3: 'mx-auto max-w-7xl px-6 lg:px-8', // Consistent spacing for the third row
+    row1: 'mx-auto max-w-7xl px-6 lg:px-8',
+    row2: 'justify-center',
+    row3: 'mx-auto max-w-7xl px-6 lg:px-8',
   };
 
   return (
@@ -13,7 +13,7 @@ function Cards({ layout, cards }) {
         layout === 'row2' ? 'w-[90%] mx-auto' : 'w-full'
       } flex flex-wrap ${rowStyles[layout]} ${
         layout === 'row2' ? '' : 'justify-between'
-      }`} // Removed mb-[10px]
+      }`}
     >
       {cards.map((card, index) => (
         <Card key={index} card={card} layout={layout} />
@@ -28,7 +28,7 @@ function Card({ card, layout }) {
 
   useEffect(() => {
     if (subtitleRef.current) {
-      setLineWidth(subtitleRef.current.offsetWidth); 
+      setLineWidth(subtitleRef.current.offsetWidth);
     }
   }, []);
 
@@ -54,9 +54,7 @@ function Card({ card, layout }) {
             >
               {card.subtitle}
             </span>
-            <span
-              className="block absolute inset-0 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0"
-            >
+            <span className="block absolute inset-0 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
               {card.subtitle}
             </span>
           </h3>
@@ -66,45 +64,31 @@ function Card({ card, layout }) {
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-sm text-gray-400 hover:text-gray-300 overflow-hidden relative"
           >
-            <span
-              className="block transform translate-y-0 transition-transform duration-500 group-hover:-translate-y-full flex items-center"
-            >
+            <span className="block transform translate-y-0 transition-transform duration-500 group-hover:-translate-y-full flex items-center">
               View Project
-              <span
-                className="ml-1 text-gray-500 transform transition-transform duration-500"
-              >
+              <span className="ml-1 text-gray-500 transform transition-transform duration-500">
                 →
               </span>
             </span>
-            <span
-              className="block absolute inset-0 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0 flex items-center"
-            >
+            <span className="block absolute inset-0 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0 flex items-center">
               View Project
-              <span
-                className="ml-1 text-gray-500 transform transition-transform duration-500"
-              >
+              <span className="ml-1 text-gray-500 transform transition-transform duration-500">
                 ↗
               </span>
             </span>
           </a>
         </div>
-        {/* Loader line */}
         <div
           className="h-[2px] bg-transparent mt-2 opacity-0 group-hover:opacity-100 overflow-hidden"
           style={{ width: `${lineWidth}px` }}
         >
-          {/* Animated loader bar inside */}
           <div className="h-full bg-gray-400 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out" />
         </div>
         <h2 className="text-xl font-semibold mt-2 overflow-hidden relative">
-          <span
-            className="block transform translate-y-0 transition-transform duration-500"
-          >
+          <span className="block transform translate-y-0 transition-transform duration-500">
             {card.title}
           </span>
-          <span
-            className="block absolute inset-0 transform translate-y-full transition-transform duration-500"
-          >
+          <span className="block absolute inset-0 transform translate-y-full transition-transform duration-500">
             {card.title}
           </span>
         </h2>
