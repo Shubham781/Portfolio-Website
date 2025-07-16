@@ -9,7 +9,6 @@ const stats = [
   { name: 'Tech Stack', value: 'React JS' },
 ];
 
-// Variants for staggered animation
 const container = {
   hidden: {},
   show: {
@@ -32,9 +31,70 @@ const item = {
   },
 };
 
-export default function Header() {
+export default function Header({ page }) {
+  const renderHeading = () => {
+    switch (page) {
+      case 'about':
+        return (
+          <>
+            <motion.h2
+              variants={item}
+              className="text-8xl font-semibold mt-4 tracking-wide text-white sm:text-8xl"
+            >
+              ELEVATING BRANDS<br />
+              WITH INNOVATIVE<br />
+              DESIGN SOLUTIONS
+            </motion.h2>
+            <motion.p
+              variants={item}
+              className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8"
+            >
+              Experienced Designer & Developer Transforming Visions Into Digital Masterpieces.
+            </motion.p>
+          </>
+        );
+      case 'work':
+        return (
+          <motion.h2
+            variants={item}
+            className="text-6xl font-semibold mt-4 tracking-wide text-white sm:text-7xl"
+          >
+            LATEST PROJECTS <br /> & CASE STUDIES
+          </motion.h2>
+        );
+      case 'contact':
+        return (
+          <motion.h2
+            variants={item}
+            className="text-6xl font-semibold mt-4 tracking-wide text-white sm:text-7xl"
+          >
+            LET'S TALK ABOUT <br /> YOUR PROJECT
+          </motion.h2>
+        );
+      default:
+        return (
+          <>
+            <motion.h2 variants={item} className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              HI, I'M SHUBHAM KUKRETI
+            </motion.h2>
+            <motion.h2 variants={item} className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              WEB DESIGNER & WEB DEVELOPER
+            </motion.h2>
+            <motion.p
+              variants={item}
+              className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8"
+            >
+              Passionate Designer and Developer Crafting Visually Captivating Websites With Code and No-Code Solutions.
+            </motion.p>
+          </>
+        );
+    }
+  };
+
+  const showStats = !['about', 'work', 'contact'].includes(page);
+
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-14">
+    <div className="relative isolate overflow-hidden py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           className="mx-auto max-w-fit lg:mx-0"
@@ -42,76 +102,75 @@ export default function Header() {
           initial="hidden"
           animate="show"
         >
-          <motion.h2 variants={item} className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-            HI, I'M SHUBHAM KUKRETI
-          </motion.h2>
-
-          <motion.h2 variants={item} className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-            WEB DESIGNER & WEB DEVELOPER
-          </motion.h2>
-
-          <motion.p
-            variants={item}
-            className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8"
-          >
-            Passionate Designer and Developer Crafting Visually Captivating Websites With Code and No-Code Solutions.
-          </motion.p>
+          {renderHeading()}
         </motion.div>
 
-        <motion.div
-          className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none mb-8"
-          variants={container}
-          initial="hidden"
-          animate="show"
-        >
-          <motion.dl
-            className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
+        {showStats && (
+          <motion.div
+            className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none mb-8"
             variants={container}
+            initial="hidden"
+            animate="show"
           >
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.name}
-                variants={item}
-                className="flex flex-col-reverse gap-1 group cursor-default"
-              >
-                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                
-                <motion.dd
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ type: 'spring', stiffness: 60, damping: 14, delay: 0.3 }}
-                  className="inline-block text-4xl font-semibold tracking-tight text-white relative overflow-hidden h-[1.1em]"
+            <motion.dl
+              className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
+              variants={container}
+            >
+              {stats.map((stat) => (
+                <motion.div
+                  key={stat.name}
+                  variants={item}
+                  className="flex flex-col-reverse gap-1 group cursor-default"
                 >
-                  <motion.span
-                    className="block transition-transform duration-500 group-hover:-translate-y-full"
+                  <dt className="text-base/7 text-gray-300">{stat.name}</dt>
+                  <motion.dd
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ type: 'spring', stiffness: 60, damping: 14, delay: 0.3 }}
+                    className="inline-block text-4xl font-semibold tracking-tight text-white relative overflow-hidden h-[1.1em]"
                   >
-                    {stat.value}
-                  </motion.span>
-                  <motion.span
-                    className="absolute inset-0 block transition-transform duration-500 translate-y-full group-hover:translate-y-0"
-                  >
-                    {stat.value}
-                  </motion.span>
-                </motion.dd>
-              </motion.div>
-            ))}
-          </motion.dl>
-        </motion.div>
+                    <motion.span className="block transition-transform duration-500 group-hover:-translate-y-full">
+                      {stat.value}
+                    </motion.span>
+                    <motion.span className="absolute inset-0 block transition-transform duration-500 translate-y-full group-hover:translate-y-0">
+                      {stat.value}
+                    </motion.span>
+                  </motion.dd>
+                </motion.div>
+              ))}
+            </motion.dl>
+          </motion.div>
+        )}
+
         <Divider />
+
         <motion.div
           className="mt-4 flex flex-col lg:flex-row justify-between items-center text-gray-300 space-y-4 lg:space-y-0 lg:space-x-8"
           variants={container}
           initial="hidden"
           animate="show"
         >
-          <motion.div variants={item} className="text-center lg:text-left">
-            <p className="text-lg font-medium">Based in India</p>
-            <p className="text-lg font-medium">and Working Worldwide.</p>
-          </motion.div>
-          <motion.div variants={item} className="text-center lg:text-left">
-            <p className="text-lg font-medium">Blending creativity with technology for impactful results.</p>
-            <p className="text-lg text-right font-medium">Turning ideas into engaging digital experiences.</p>
-          </motion.div>
+          {page === 'about' ? (
+            <>
+              <motion.div variants={item} className="text-center lg:text-left">
+                <p className="text-lg font-medium">Experienced Designer & Developer</p>
+              </motion.div>
+              <motion.div variants={item} className="text-center lg:text-left">
+                <p className="text-lg text-right font-medium">Transforming Visions Into Digital Masterpieces</p>
+              </motion.div>
+            </>
+          ) : (
+            <>
+              <motion.div variants={item} className="text-center lg:text-left">
+                <p className="text-lg font-medium">Based in India</p>
+                <p className="text-lg font-medium">and Working Worldwide.</p>
+              </motion.div>
+              <motion.div variants={item} className="text-center lg:text-left">
+                <p className="text-lg font-medium">Blending creativity with technology for impactful results.</p>
+                <p className="text-lg text-right font-medium">Turning ideas into engaging digital experiences.</p>
+              </motion.div>
+            </>
+          )}
         </motion.div>
       </div>
     </div>

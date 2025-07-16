@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <>
             <div className="mx-auto max-w-[77rem] px-8 mt-4 lg:px-8 border-b-1 border-white"></div>
-            <div className="h-full w-screen bg-gray-900 flex items-center justify-center my-2">
+            <div className="h-full w-screen flex items-center justify-center my-2">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
                     <div className="mx-auto max-w-fit text-white lg:mx-0 py-12 group">
                         <ul className="space-y-1">

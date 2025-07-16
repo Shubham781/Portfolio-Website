@@ -6,13 +6,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 const leftLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  { name: 'HOME', href: '/' },
+  { name: 'ABOUT', href: '/about' },
 ];
 
 const rightLinks = [
-  { name: 'Work', href: '/work' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'WORK', href: '/work' },
+  { name: 'CONTACT', href: '/contact' },
 ];
 
 function HoverAnimatedLink({ to, children }) {
@@ -35,7 +35,7 @@ function HoverAnimatedLink({ to, children }) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-900 shadow">
+    <Disclosure as="nav" className=" shadow">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center sm:hidden">
@@ -55,7 +55,7 @@ export default function Navbar() {
 
           <div className="relative group inline-block text-white text-2xl font-semibold tracking-wide">
             <HoverAnimatedLink to="/shubham-kukreti">
-              Shubham Kukreti
+              SHUBHAM KUKRETI
             </HoverAnimatedLink>
           </div>
 

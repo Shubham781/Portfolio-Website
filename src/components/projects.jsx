@@ -19,7 +19,7 @@ function Projects() {
 
   return (
     <>
-      <div className="h-full w-screen bg-gray-900">
+      <div className="h-full w-screen">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-4">
           <div className="mx-auto max-w-fit text-white lg:mx-0 py-12">
             <ul>

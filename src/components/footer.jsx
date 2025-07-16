@@ -25,7 +25,7 @@ function HoverAnimatedIcon({ href, children }) {
 
 export default function Footer() {
   return (
-    <><div className="mx-auto max-w-[77rem] px-8 mt-4 lg:px-8 border-b-1 border-white"></div><footer className="bg-gray-900 text-white py-8">
+    <><div className="mx-auto max-w-[77rem] px-8 mt-4 lg:px-8 border-b-1 border-white"></div><footer className="text-white py-8">
       <div className="container mx-auto flex justify-between items-center px-8">
         <div className="relative group text-3xl font-semibold overflow-hidden">
           <span className="block transition-transform duration-500 group-hover:-translate-y-full">

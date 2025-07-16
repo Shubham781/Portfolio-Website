@@ -6,7 +6,7 @@ const Services = () => {
     return (
         <>
         <div className="mx-auto max-w-[77rem] px-8 lg:px-8 border-b-1 border-white pt-4 mt-6"></div>
-            <div className="h-full w-screen bg-gray-900 ">
+            <div className="h-full w-screen ">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
                     <div className="mx-auto max-w-fit text-white lg:mx-0 py-12">
                         <ul className="space-y-1">
@@ -17,7 +17,7 @@ const Services = () => {
                     <Divider />
                 </div>
             </div>
-            <div className="h-full w-screen bg-gray-900">
+            <div className="h-full w-screen">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-wrap py-12 pb-8">
                     <div className="w-full lg:w-1/2 text-white">
                         <h2 className="text-5xl font-semibold">UI/UX Design</h2>
@@ -34,7 +34,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-full w-screen bg-gray-900 ">
+            <div className="h-full w-screen ">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-wrap py-12 pb-8">
                     <div className="w-full lg:w-1/2 text-white">
                         <h2 className="text-5xl font-semibold">Web Development</h2>

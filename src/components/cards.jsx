@@ -36,7 +36,7 @@ function Card({ card, layout }) {
     <div
       className={`${
         layout === 'row2' ? 'w-[100%]' : 'w-[49.5%]'
-      } bg-gray-900 text-white rounded-lg overflow-hidden shadow-md group relative`}
+      } text-white rounded-lg overflow-hidden shadow-md group relative`}
     >
       <div className="overflow-hidden">
         <img
@@ -62,7 +62,7 @@ function Card({ card, layout }) {
             href={card.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-sm text-gray-400 hover:text-gray-300 overflow-hidden relative"
+            className="flex items-center space-x-2 text-sm hover:text-gray-300 overflow-hidden relative"
           >
             <span className="block transform translate-y-0 transition-transform duration-500 group-hover:-translate-y-full flex items-center">
               View Project
@@ -82,7 +82,7 @@ function Card({ card, layout }) {
           className="h-[2px] bg-transparent mt-2 opacity-0 group-hover:opacity-100 overflow-hidden"
           style={{ width: `${lineWidth}px` }}
         >
-          <div className="h-full bg-gray-400 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out" />
+          <div className="h-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out" />
         </div>
         <h2 className="text-xl font-semibold mt-2 overflow-hidden relative">
           <span className="block transform translate-y-0 transition-transform duration-500">
