@@ -10,3 +10,6 @@
 body{
     background-color: #0A0A0C; /* Tailwind's bg-gray-900 equivalent */
 }
+
+/* DELETE THIS FROM YOUR GLOBAL CSS IF IT EXISTS */
+
